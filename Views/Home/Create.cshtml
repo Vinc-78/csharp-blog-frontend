@@ -39,33 +39,57 @@
 
 <script type="text/javascript">
 
-    function submitForm(event) {
+    async function submitForm(event) {
 
         event.preventDefault();
 
-        axios.post('http://localhost:5000/api/posts', {
+        try{
+
+       let res = await axios.post('https://localhost:5000/api/Posts', {
             Title: document.querySelector('.js_input_title').value,
             Description: document.querySelector('.js_input_description').value,
             Image: document.querySelector('.js_input_image').value,
-        }).then((res) => {
 
-            console.log('risultato ok', res.data);
 
-            // facciamo uscire un alert di avvenuto salvataggio che poi viene rimosso e si torna alla home
-            document.querySelector('.js-alert-success').classList.remove('d-none');
+        });
 
-            setTimeout(function() {
+        document.querySelector('.js-alert-success').classList.remove('d-none');
 
-                location.href = "/";
+          setTimeout(function() {
 
-            }, 2000);
+              location.href = "/";
 
-        }).catch((res) => {
+           }, 2000);
 
-            console.error('risultato errore', res);
+        console.log('risultato ok', res);
+
+        }
+        catch(res){
+
+             console.error('risultato errore', res);
 
             gestisciErroriValidazione(res.response.data.errors);
-        });
+        
+        }
+        //.then((res) => {
+
+        //    console.log('risultato ok', res.data);
+
+        //    // facciamo uscire un alert di avvenuto salvataggio che poi viene rimosso e si torna alla home
+        //    document.querySelector('.js-alert-success').classList.remove('d-none');
+
+        //    setTimeout(function() {
+
+        //        location.href = "/";
+
+        //    }, 2000);
+
+        //}).catch((res) => {
+
+        //    console.error('risultato errore', res);
+
+        //    gestisciErroriValidazione(res.response.data.errors);
+        //});
     }
 
     // facciamo notare che questa funzione è uguale a quella delle pagina di modifica..si potrebbe accentrare...
