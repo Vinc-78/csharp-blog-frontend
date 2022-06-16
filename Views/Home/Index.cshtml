@@ -106,6 +106,7 @@
                 });
             }
         });
+       
 
     }
 
@@ -117,7 +118,7 @@
 
         if (isDelete) {
 
-            axios.delete(`http://localhost:5000/api/posts/${itemId}`).then((res) => {
+            axios.delete(`https://localhost:5000/api/posts/${itemId}`).then((res) => {
 
                 loadList();
 
