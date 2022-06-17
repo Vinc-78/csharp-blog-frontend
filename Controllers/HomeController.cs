@@ -32,6 +32,11 @@ namespace csharp_blog_frontend.Controllers
             return View();
         }
 
+        public IActionResult CreateFile()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Delete(int id)
         {
