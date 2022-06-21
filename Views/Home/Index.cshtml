@@ -5,7 +5,7 @@
                 <h1 class="mt-3 mb-3">Lista posts</h1>
                 <a class="btn btn-primary"
                    href="@Url.Action("Create", "Home")">
-                    Nuovo post
+                    Nuovo post con url img
                 </a>
                  <a class="btn btn-primary"
                    href="@Url.Action("CreateFile", "Home")">
@@ -15,12 +15,12 @@
 
           @*  form per la ricerca:*@
 
-          <form method="post" onsubmit="search(event)">
+          <form class="my-4" method="post" onsubmit="search(event)">
 
-            <label for="gsearch">Ricerca </label>
-            <input type="search" id="gsearch" name="gsearch">
+            <label for="gsearch">Ricerca testuale </label>
+            <input type="search" id="gsearch" name="gsearch" style="min-width:45%; text-align:center">
 
-            <input type="submit"  value="ricerca">
+            <input type="submit"  value="Visualizza">
 
           </form>
             
@@ -83,12 +83,18 @@
 	                        <td>${post.id}</td>
                             <td class="image"><img src="${post.image}"></td>
 	                        <td class="title">${post.title}</td>
-	                        <td class="description">${post.description}</td>
+	                        <td class="description" style="display: -webkit-box;
+                                                            -webkit-line-clamp: 3;
+                                                            -webkit-box-orient: vertical;
+                                                            overflow: hidden;
+                                                            text-overflow: ellipsis;
+                                                            border-bottom-width: 0px;
+                                                                ">${post.description}</td>
 	                        <td class="items-buttons">
                                 <div class="buttons">
                                     
                                     <a type="button" class="btn btn-info btn-sm" href="/home/DetailBlob/${post.id}">
-			                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+			                            &#127924;
 		                            </a>
 
 		                            <a type="button" class="btn btn-info btn-sm" href="/home/details/${post.id}">
@@ -146,12 +152,18 @@
 	                        <td>${post.id}</td>
                             <td class="image"><img src="${post.image}"></td>
 	                        <td class="title">${post.title}</td>
-	                        <td class="description">${post.description}</td>
+	                       <td class="description" style="display: -webkit-box;
+                                                            -webkit-line-clamp: 3;
+                                                            -webkit-box-orient: vertical;
+                                                            overflow: hidden;
+                                                            text-overflow: ellipsis;
+                                                            border-bottom-width: 0px;
+                                                                ">${post.description}</td>
 	                        <td class="items-buttons">
                                 <div class="buttons">
                                     
                                     <a type="button" class="btn btn-info btn-sm" href="/home/DetailBlob/${post.id}">
-			                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+			                           &#127924;
 		                            </a>
 
 		                            <a type="button" class="btn btn-info btn-sm" href="/home/details/${post.id}">
