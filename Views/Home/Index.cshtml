@@ -54,6 +54,12 @@
     
     function loadList() {
 
+        let stringa = document.getElementById("gsearch");
+
+        stringa = stringa.value;
+
+        stringa= "";
+
         //utilizza axios per la chiamata all'api dei post
 
         axios.get('https://localhost:5000/api/posts').then((res) => {
@@ -93,7 +99,7 @@
 	                        <td class="items-buttons">
                                 <div class="buttons">
                                     
-                                    <a type="button" class="btn btn-info btn-sm" href="/home/DetailBlob/${post.id}">
+                                    <a type="button" class="btn btn btn-outline-info btn-sm" href="/home/DetailBlob/${post.id}">
 			                            &#127924;
 		                            </a>
 
@@ -162,7 +168,7 @@
 	                        <td class="items-buttons">
                                 <div class="buttons">
                                     
-                                    <a type="button" class="btn btn-info btn-sm" href="/home/DetailBlob/${post.id}">
+                                    <a type="button" class="btn btn btn-outline-info btn-sm" href="/home/DetailBlob/${post.id}">
 			                           &#127924;
 		                            </a>
 
