@@ -12,8 +12,8 @@ Il salvataggio del file avviene sia in locale che su server con conversione in b
 La gestione voluta in parallelo viene mantenuta anche per la view dei dettagli 
 In sintesi a lato al post ci sono 5 tasti: 
 
-il primo tasto gestisce la view di dettaglio se il post ha un immagine inserita da file
-il secondo ne gestisce la modifica
-il terzo gestisce la view di dettaglio se il post ha un immagine inserita da url
-il quarto la relativa modifica
+il primo tasto gestisce la view di dettaglio se il post ha un immagine inserita da file,
+il secondo ne gestisce la modifica,
+il terzo gestisce la view di dettaglio se il post ha un immagine inserita da url,
+il quarto la relativa modifica,
 il quinto elimina il post da db. 
