@@ -61,6 +61,8 @@ namespace csharp_blog_frontend.Controllers
             return View();
         }
 
+        
+
         public IActionResult Privacy()
         {
             return View();
