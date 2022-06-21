@@ -61,7 +61,12 @@ namespace csharp_blog_frontend.Controllers
             return View();
         }
 
-        
+        public IActionResult UpdateBlob(int id)
+        {
+            return View(id);
+        }
+
+
 
         public IActionResult Privacy()
         {
